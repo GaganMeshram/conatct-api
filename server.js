@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 const cors = require("cors");
-app.use(cors({
-  origin:["http://localhost:4500/users", "https://contact-app.onrender.com"]
-}));
+app.use(
+  cors({
+    origin: ["http://localhost:4500/users", "https://contact-app.onrender.com"],
+  })
+);
 const mongoose = require("mongoose");
 const userModel = require("./model/Users.js");
 const env = require("dotenv");
